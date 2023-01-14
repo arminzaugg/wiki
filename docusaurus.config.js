@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'My Wiki',
   tagline: 'Documentation just got cool again',
-  url: 'https://comboner.github.io',
-  baseUrl: '/gh-wiki/',
+  url: 'https://comboner.github.io/gh-wiki',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
