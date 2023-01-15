@@ -28,3 +28,25 @@ Git reset, ```git reset HEAD^``` does the same as ```git branch -f <branch_name>
 
 For this one should use `git revert`. ```git revert HEAD~2```, appends the relativ commit to the tip of the node as a new commit, so that one move forward in history although its kind of old news.
 
+### Commands for reset and revert
+- ```git reset HEAD^```, moves `branch` on commit up/back in the tree.
+- ```git revert HEAD^```, creates a copy of the HEAD^ commit and creats a new commit which is forward in history.
+
+### Cherry-pick and interactive rebase
+
+Cherry-pick allows one to make a copy any commit from the repo and attach it to the current `HEAD`.
+
+While `git cherry-pick` is nice if you know exactly which commits you like to copy. Its not ideal if it gets a bit more complex. For that one can use `git rebase -i` which has an interactive mode and displays all the information one needs to complete the task.
+
+As in `git rebase` normal mode the active branch/HEAD gets a new base specified in the command. However instead of creating copies of all intermediary commits one can choose and reorder.
+
+### Commands for cherry-pick and interactive rebase
+- ```git cherry-pick <commit_id> <commit_id> etc.```, assuming created commit copies should be attached to the current HEAD.
+- ```git rebase -i```, starts interactive rebase.
+    
+### Use cases for cherry-pick or interactive rebase
+- `git cherry-pick` is an easy way to choose which commits should be added to main after a debuging session where only the solution should be in main.
+- `git commit --ammnd` can be only applied to the tip of the current branch. So if one has to mess with previous commits, `git rebase -i` is an option to reorder commits so that the one to be amended is on top.
+    
+### Get some orientation
+```git describe <ref>``` will tell you where you at relative to the closest anchor aka tag. This is useful if you e.g. came back from holiday.
