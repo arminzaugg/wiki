@@ -1,4 +1,4 @@
 ---
-id: home
+id: intro
 ---
 # Home
