@@ -49,4 +49,4 @@ As in `git rebase` normal mode the active branch/HEAD gets a new base specified 
 - `git commit --ammnd` can be only applied to the tip of the current branch. So if one has to mess with previous commits, `git rebase -i` is an option to reorder commits so that the one to be amended is on top.
     
 ### Get some orientation
-```git describe <ref>``` will tell you where you at relative to the closest anchor aka tag. This is useful if you e.g. came back from holiday.
+```git describe <ref>``` will tell you where you at relative to the closest anchor aka tag. This is useful if you e.g. came back from holiday. The output looks like `<tag>_<numCommits>_g<hash>`.
