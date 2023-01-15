@@ -16,6 +16,7 @@ One can always move to a certain commit hash using ```git checkout <commit_id>``
 - ```git checkout <commit_id>```, moves HEAD to specified commit id.
 - ```git branch -f <branch_name> <commit_id or relativ HEAD ref>```, points branch to specified commit id.
 - ```git switch <branch_name>```, change to branch.
+- ```git checkout HEAD^2```, moves head one node up to the secondary parent. This can be usefull when navigating through merge commits which have more than one parent and are thus ambigious.
 
 :::note
 `git checkout` has been replaced with two new commands because `checkout` did two many things. Everthing `checkout` did, can now be done with `git switch` and `git restore`.
@@ -49,4 +50,4 @@ As in `git rebase` normal mode the active branch/HEAD gets a new base specified 
 - `git commit --ammnd` can be only applied to the tip of the current branch. So if one has to mess with previous commits, `git rebase -i` is an option to reorder commits so that the one to be amended is on top.
     
 ### Get some orientation
-```git describe <ref>``` will tell you where you at relative to the closest anchor aka tag. This is useful if you e.g. came back from holiday. The output looks like `<tag>_<numCommits>_g<hash>`.
+```git describe <ref>``` will tell you where you at relative to the closest anchor aka tag. The ref can be anything which can be resolved into a commit (branch, HEAD, relative HEAD, commit_id). This is useful if you e.g. came back from holiday. The output looks like `<tag>_<numCommits>_g<hash>`.
