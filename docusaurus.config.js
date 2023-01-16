@@ -9,7 +9,7 @@ const config = {
   title: 'My Wiki',
   tagline: 'Documentation just got cool again',
   url: 'https://comboner.github.io',
-  baseUrl: '/docs/intro',
+  baseUrl: '/gh-wiki',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -59,19 +59,6 @@ const config = {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
         },
-        items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Wiki',
-          },
-          {
-            href: 'https://github.com/comboner/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
       },
       prism: {
         theme: lightCodeTheme,
