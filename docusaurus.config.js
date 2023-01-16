@@ -9,7 +9,7 @@ const config = {
   title: 'My Wiki',
   tagline: 'Documentation just got cool again',
   url: 'https://comboner.github.io',
-  baseUrl: '/gh-wiki',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
