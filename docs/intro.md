@@ -1,4 +1,5 @@
 ---
 id: intro
+slug: /
 ---
 # Home
