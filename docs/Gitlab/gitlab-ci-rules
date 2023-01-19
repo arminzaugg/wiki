@@ -1,0 +1,71 @@
+---
+Title: Gitlab CI Rules
+---
+
+### Gitlab CI Rules
+
+Before we can start using rules, we must understand variables. They come from a lot of different places, like:
+- CI/CD Configuration
+- Default Gitlab variables
+- Genrated from previous jobs
+- Project/Group configuration
+
+[Predefiend variables](https://docs.gitlab.com/ee/ci/variables/predefined_variables.html) are not meant to be overwritten, but can be used in Rules. Some of them are very common:
+- `CI_API_V4_URL` - API base url of Gitlab instance
+- `CI_COMMIT_BRANCH` - Branch name
+
+
+### Pipeline Triggers
+
+Pipelines can be triggered by any of the following events:
+- new commit
+- new branch
+- new tag
+- manual
+- api call
+- scheduled
+
+### Rules Components
+What can one use to create rules?
+
+#### Clauses
+- if
+- changes
+- exists
+- (... or none)
+
+#### Operators
+- `==`
+- `!=`
+- `=~`
+- `!=`
+- `!~`
+- `&&`
+- `||`
+
+#### Results
+- when
+- allow_failure
+- start_in
+
+#### "when options"
+- always
+- never
+- on_success
+- on_failure
+- manual
+- Delayed
+- (... or none)
+
+
+
+
+
+
+
+
+
+
+
+
+

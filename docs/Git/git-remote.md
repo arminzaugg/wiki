@@ -26,6 +26,10 @@ Thats why always run `git fetch` befor pushing. Rebase when needed.
 Becase `git fetch; git rebase origin/main main; git push` is so common there is a shorthand for this: `git pull --rebase`
 :::
 
+#TODO Create heading on remote arguments
+
+
+
 
 
 
