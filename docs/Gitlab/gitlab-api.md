@@ -37,6 +37,23 @@ If no discussions exist API returns `[]`
 curl -sS -H "PRIVATE-TOKEN: $PRIVATE_TOKEN" "$CI_API_V4_URL/projects/60/merge_requests/22/discussions" | jq --arg MESSAGE "$MR_PRD_MESSAGE" 'map(select(.notes[].type == "DiscussionNote" and .notes[].body == env.MR_PRD_MESSAGE and .notes[].resolved != true))'
 ```
 
+- get all discussions with body regex match
+```
+curl -sS -H "PRIVATE-TOKEN: $PRIVATE_TOKEN" "$CI_API_V4_URL/projects/60/merge_requests/45/discussions" | jq 'map(select(.notes[].type ==
+ "DiscussionNote" and (.notes[].body | test("^TF PLAN.*" ) )))' | jq '.[].notes[].id'
+ ```
+
+
+- delete notes
+`DELETE /projects/:id/merge_requests/:merge_request_iid/discussions/:discussion_id/notes/:note_id
+`
+example
+```
+curl --request DELETE -H "PRIVATE-TOKEN: $PRIVATE_TOKEN" "$CI_API_V4_URL/projects/60/merge_requests/45/4642"
+```
+
+
+
 
 
 
