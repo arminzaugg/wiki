@@ -49,7 +49,7 @@ curl -sS -H "PRIVATE-TOKEN: $PRIVATE_TOKEN" "$CI_API_V4_URL/projects/60/merge_re
 `
 example
 ```
-curl --request DELETE -H "PRIVATE-TOKEN: $PRIVATE_TOKEN" "$CI_API_V4_URL/projects/60/merge_requests/45/4642"
+curl --request DELETE -H "PRIVATE-TOKEN: $PRIVATE_TOKEN" "$CI_API_V4_URL/projects/60/merge_requests/45/notes/4642"
 ```
 
 
