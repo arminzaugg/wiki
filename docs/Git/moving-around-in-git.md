@@ -31,7 +31,11 @@ For this one should use `git revert`. ```git revert HEAD~2```, appends the relat
 
 ### Commands for reset and revert
 - ```git reset HEAD^```, moves `branch` on commit up/back in the tree.
-- ```git revert HEAD^```, creates a copy of the HEAD^ commit and creats a new commit which is forward in history.
+- ```git revert HEAD```, creates a copy of the HEAD^ commit and creats a new commit which is forward in history.
+
+:::danger
+Why does git revert HEAD^ not work. One has to use ..HEAD how can one move further back?
+:::
 
 ### Cherry-pick and interactive rebase
 
