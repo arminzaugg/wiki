@@ -8,18 +8,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'My Wiki',
   tagline: 'Documentation just got cool again',
-  url: 'https://comboner.github.io',
+  url: 'https://wiki.traintown.solutions',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'comboner', // Usually your GitHub org/user name.
-  projectName: 'gh-wiki', // Usually your repo name.
-  deploymentBranch: 'gh-pages',
-  trailingSlash: false,
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -39,7 +33,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/comboner/gh-wiki/tree/gh-pages/docs',
+            'https://github.com/comboner/wiki/tree/dev',
           routeBasePath: '/'
         },
         blog: false,
